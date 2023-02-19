@@ -10,14 +10,16 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var ofOnSwitch: UISwitch!
+    @IBOutlet var stepper: UIStepper!
+    @IBOutlet var labelCount: UILabel!
+
+
     let onOfKey = "onOfKey"
     let userDefaults = UserDefaults.standard
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         changeSwitch()
-
     }
 
     @IBAction func ofOnSwitchChange(_ sender: UISwitch) {
@@ -26,9 +28,14 @@ class ViewController: UIViewController {
             view.backgroundColor = .gray
         } else {
             userDefaults.set(false, forKey: onOfKey)
-            view.backgroundColor = .blue
-
+            view.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
         }
+
+    }
+
+
+    @IBAction func stepper(_ sender: UIStepper) {
+        labelCount.text = "\(sender.value)"
     }
 
     private func changeSwitch() {
@@ -37,8 +44,8 @@ class ViewController: UIViewController {
             view.backgroundColor = .gray
         } else {
             ofOnSwitch.setOn(false, animated: true)
-            view.backgroundColor = .blue
-
+            view.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
         }
     }
+
 }
