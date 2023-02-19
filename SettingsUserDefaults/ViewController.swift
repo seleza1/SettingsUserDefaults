@@ -19,11 +19,11 @@ class ViewController: UIViewController {
     let darkTheme = "darkTheme"
     let lightTheme = "lightTheme"
     let redTheme = "redTheme"
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkSwitchState()
+        updateTheme()
     }
     
     @IBAction func segmentedChanged(_ sender: UISegmentedControl) {
@@ -36,7 +36,6 @@ class ViewController: UIViewController {
             userDefaults.set(redTheme, forKey: themeKey)
         default:
             userDefaults.set(lightTheme, forKey: themeKey)
-
         }
         updateTheme()
     }
