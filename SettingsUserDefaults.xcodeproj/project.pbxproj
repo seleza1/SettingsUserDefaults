@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		CE643B0329A2020A00A0B8F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE643B0229A2020A00A0B8F8 /* AppDelegate.swift */; };
 		CE643B0529A2020A00A0B8F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE643B0429A2020A00A0B8F8 /* SceneDelegate.swift */; };
-		CE643B0729A2020A00A0B8F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE643B0629A2020A00A0B8F8 /* ViewController.swift */; };
+		CE643B0729A2020A00A0B8F8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE643B0629A2020A00A0B8F8 /* SettingsViewController.swift */; };
 		CE643B0A29A2020A00A0B8F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE643B0829A2020A00A0B8F8 /* Main.storyboard */; };
 		CE643B0C29A2020D00A0B8F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE643B0B29A2020D00A0B8F8 /* Assets.xcassets */; };
 		CE643B0F29A2020D00A0B8F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE643B0D29A2020D00A0B8F8 /* LaunchScreen.storyboard */; };
+		CE643B1729A26E1A00A0B8F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE643B1629A26E1A00A0B8F8 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE643AFF29A2020A00A0B8F8 /* SettingsUserDefaults.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SettingsUserDefaults.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE643B0229A2020A00A0B8F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE643B0429A2020A00A0B8F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE643B0629A2020A00A0B8F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE643B0629A2020A00A0B8F8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CE643B0929A2020A00A0B8F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE643B0B29A2020D00A0B8F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE643B0E29A2020D00A0B8F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE643B1029A2020D00A0B8F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE643B1629A26E1A00A0B8F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				CE643B0229A2020A00A0B8F8 /* AppDelegate.swift */,
 				CE643B0429A2020A00A0B8F8 /* SceneDelegate.swift */,
-				CE643B0629A2020A00A0B8F8 /* ViewController.swift */,
+				CE643B0629A2020A00A0B8F8 /* SettingsViewController.swift */,
+				CE643B1629A26E1A00A0B8F8 /* ViewController.swift */,
 				CE643B0829A2020A00A0B8F8 /* Main.storyboard */,
 				CE643B0B29A2020D00A0B8F8 /* Assets.xcassets */,
 				CE643B0D29A2020D00A0B8F8 /* LaunchScreen.storyboard */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE643B0729A2020A00A0B8F8 /* ViewController.swift in Sources */,
+				CE643B0729A2020A00A0B8F8 /* SettingsViewController.swift in Sources */,
 				CE643B0329A2020A00A0B8F8 /* AppDelegate.swift in Sources */,
+				CE643B1729A26E1A00A0B8F8 /* ViewController.swift in Sources */,
 				CE643B0529A2020A00A0B8F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
