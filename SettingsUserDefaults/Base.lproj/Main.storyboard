@@ -56,7 +56,7 @@
                     <navigationItem key="navigationItem" title="Settings" id="eEj-f5-giG">
                         <barButtonItem key="rightBarButtonItem" image="rosette" catalog="system" id="34G-lf-3rQ">
                             <connections>
-                                <segue destination="hKF-Nt-aRd" kind="presentation" id="LVu-y1-I3f"/>
+                                <segue destination="hKF-Nt-aRd" kind="showDetail" id="um7-2P-dfh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,7 +82,7 @@
                                 <rect key="frame" x="163" y="92" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="ofOnSwitchChange:" destination="hKF-Nt-aRd" eventType="valueChanged" id="tec-Ft-NEp"/>
+                                    <action selector="ofOnSwitchChange:" destination="hKF-Nt-aRd" eventType="valueChanged" id="mRK-iA-qou"/>
                                 </connections>
                             </switch>
                         </subviews>
@@ -90,8 +90,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="ofOnSwitch" destination="xQK-uk-bar" id="1Iu-l5-gUf"/>
-                        <outlet property="ofOnswitch" destination="Bwh-Fv-Dua" id="THl-lU-WgD"/>
+                        <outlet property="ofOnSwitch" destination="Bwh-Fv-Dua" id="UhI-q5-7wK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWj-gI-ETu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
