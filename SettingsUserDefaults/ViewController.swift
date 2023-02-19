@@ -8,17 +8,43 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var onOfLabel: UILabel!
-
     @IBOutlet var onOfSwitch: UISwitch!
     @IBOutlet var themeSegment: UISegmentedControl!
     
+    let userDefaults = UserDefaults.standard
+    let onOfKey = "onOffKey"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        checkSwitchState()
     }
+    
+    func checkSwitchState() {
+        if userDefaults.bool(forKey: onOfKey) {
+            onOfSwitch.setOn(true, animated: false)
+            onOfLabel.text = "ON"
+        } else {
+            onOfSwitch.setOn(false, animated: false)
+            onOfLabel.text = "OFF"
+        }
+        
+    }
+    
+    @IBAction func segmentedChanged(_ sender: UISegmentedControl) {
 
-
+    }
+    
+    @IBAction func switchChanged(_ sender: UISwitch) {
+        if (onOfSwitch.isOn) {
+            userDefaults.set(true, forKey: onOfKey)
+            onOfLabel.text = "ON"
+        } else {
+            userDefaults.set(false, forKey: onOfKey)
+            onOfLabel.text = "OFF"
+        }
+        
+    }
+    
 }
-

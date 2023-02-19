@@ -33,6 +33,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNf-ZD-QPb">
                                 <rect key="frame" x="213" y="97" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZlD-rx-4rq"/>
+                                </connections>
                             </switch>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hfn-ok-BbM">
                                 <rect key="frame" x="92" y="180" width="181" height="32"/>
@@ -42,6 +45,9 @@
                                     <segment title="Dark"/>
                                     <segment title="Blue"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="QNl-rx-KdH"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0H-Np-hfD">
                                 <rect key="frame" x="156" y="141" width="53" height="21"/>
@@ -56,8 +62,8 @@
                     </view>
                     <connections>
                         <outlet property="onOfLabel" destination="JyX-KZ-R1a" id="wRP-1V-S4G"/>
-                        <outlet property="onOfSwitch" destination="bNf-ZD-QPb" id="bOX-gM-GBa"/>
-                        <outlet property="themeSegment" destination="Hfn-ok-BbM" id="fzO-gz-98q"/>
+                        <outlet property="onOfSwitch" destination="bNf-ZD-QPb" id="xZk-B4-NgR"/>
+                        <outlet property="themeSegment" destination="Hfn-ok-BbM" id="aAp-VM-8Vk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
