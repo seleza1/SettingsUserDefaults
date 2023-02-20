@@ -7,10 +7,11 @@
 
 import Foundation
 
-enum UserDefaultsKeys: String {
-    case onOfKey
-    case themeKey
-    case darkTheme
-    case lightTheme
-    case redTheme
+enum UserDefaultsKeys {
+
+    static let onOfKey = "onOfKey"
+    static let themeKey = "themeKey"
+    static let darkTheme = "darkTheme"
+    static let lightTheme = "lightTheme"
+    static let redTheme = "redTheme"
 }
