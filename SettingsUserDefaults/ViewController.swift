@@ -15,11 +15,13 @@ class ViewController: UIViewController {
 
 
     let onOfKey = "onOfKey"
+    let stepperKey = "stepperKey"
     let userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         changeSwitch()
+        labelCount.text = userDefaults.string(forKey: stepperKey)
     }
 
     @IBAction func ofOnSwitchChange(_ sender: UISwitch) {
@@ -33,14 +35,15 @@ class ViewController: UIViewController {
 
     }
 
-
     @IBAction func stepper(_ sender: UIStepper) {
         labelCount.text = "\(sender.value)"
+        userDefaults.set(labelCount.text, forKey: stepperKey)
+        
+
     }
 
     private func changeSwitch() {
         if userDefaults.bool(forKey: onOfKey) {
-            ofOnSwitch.setOn(true, animated: false)
             view.backgroundColor = .gray
         } else {
             ofOnSwitch.setOn(false, animated: true)
