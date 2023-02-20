@@ -9,16 +9,11 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    @IBOutlet var onOfLabel: UILabel!
-    @IBOutlet var onOfSwitch: UISwitch!
-    @IBOutlet var themeSegment: UISegmentedControl!
+    @IBOutlet private var onOfLabel: UILabel!
+    @IBOutlet private var onOfSwitch: UISwitch!
+    @IBOutlet private var themeSegment: UISegmentedControl!
     
     let userDefaults = UserDefaults.standard
-    let onOfKey = "onOffKey"
-    let themeKey = "themeKey"
-    let darkTheme = "darkTheme"
-    let lightTheme = "lightTheme"
-    let redTheme = "redTheme"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,29 +24,29 @@ class SettingsViewController: UIViewController {
     @IBAction func segmentedChanged(_ sender: UISegmentedControl) {
         switch themeSegment.selectedSegmentIndex {
         case 0:
-            userDefaults.set(lightTheme, forKey: themeKey)
+            userDefaults.set(UserDefaultsKeys.lightTheme.rawValue, forKey: UserDefaultsKeys.themeKey.rawValue)
         case 1:
-            userDefaults.set(darkTheme, forKey: themeKey)
+            userDefaults.set(UserDefaultsKeys.darkTheme.rawValue, forKey: UserDefaultsKeys.themeKey.rawValue)
         case 2:
-            userDefaults.set(redTheme, forKey: themeKey)
+            userDefaults.set(UserDefaultsKeys.redTheme.rawValue, forKey: UserDefaultsKeys.themeKey.rawValue)
         default:
-            userDefaults.set(lightTheme, forKey: themeKey)
+            userDefaults.set(UserDefaultsKeys.lightTheme.rawValue, forKey: UserDefaultsKeys.themeKey.rawValue)
         }
         updateTheme()
     }
     
     @IBAction func switchChanged(_ sender: UISwitch) {
         if (onOfSwitch.isOn) {
-            userDefaults.set(true, forKey: onOfKey)
+            userDefaults.set(true, forKey: UserDefaultsKeys.onOfKey.rawValue)
             onOfLabel.text = "ON"
         } else {
-            userDefaults.set(false, forKey: onOfKey)
+            userDefaults.set(false, forKey: UserDefaultsKeys.onOfKey.rawValue)
             onOfLabel.text = "OFF"
         }
     }
 
     private func checkSwitchState() {
-        if userDefaults.bool(forKey: onOfKey) {
+        if userDefaults.bool(forKey: UserDefaultsKeys.onOfKey.rawValue) {
             onOfSwitch.setOn(true, animated: false)
             onOfLabel.text = "ON"
         } else {
@@ -61,15 +56,15 @@ class SettingsViewController: UIViewController {
     }
 
     private func updateTheme() {
-        let theme = userDefaults.string(forKey: themeKey)
+        let theme = userDefaults.string(forKey: UserDefaultsKeys.themeKey.rawValue)
 
-        if theme == lightTheme {
+        if theme == UserDefaultsKeys.lightTheme.rawValue {
             themeSegment.selectedSegmentIndex = 0
             view.backgroundColor = .white
-        } else if theme == darkTheme {
+        } else if theme == UserDefaultsKeys.darkTheme.rawValue {
             themeSegment.selectedSegmentIndex = 1
             view.backgroundColor = .gray
-        } else if theme == redTheme {
+        } else if theme == UserDefaultsKeys.redTheme.rawValue {
             themeSegment.selectedSegmentIndex = 2
             view.backgroundColor = .blue
         }

@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var ofOnSwitch: UISwitch!
-    @IBOutlet var stepper: UIStepper!
-    @IBOutlet var labelCount: UILabel!
+    @IBOutlet private var ofOnSwitch: UISwitch!
+    @IBOutlet private var stepper: UIStepper!
+    @IBOutlet private var labelCount: UILabel!
 
 
     let onOfKey = "onOfKey"
@@ -38,7 +38,6 @@ class ViewController: UIViewController {
     @IBAction func stepper(_ sender: UIStepper) {
         labelCount.text = "\(sender.value)"
         userDefaults.set(labelCount.text, forKey: stepperKey)
-        
 
     }
 
